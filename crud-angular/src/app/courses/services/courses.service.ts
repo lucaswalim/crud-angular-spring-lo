@@ -17,7 +17,7 @@ export class CoursesService {
     return this.httpClient.get<Course[]>(this.API)
     .pipe(
       first(), // Vai buscar o primeiro resultado e depois fecha o observable, pegara a lista e fecha
-      delay(3000),
+      delay(1000),
       tap(courses => console.log(courses))
     );
   }
